@@ -8,8 +8,8 @@ In the project directory, you can run:
 
 ### `npm install`
 
-Open a terminal in the root of the project and install the dependencies of the project with "npm i" or "npm install" comments.
-Note: Make sure that NodeJS Runtime is installed and updated in your system.
+Open a terminal in the root of the project and install the dependencies of the project with "npm i" or "npm install" comments.\
+Note: Make sure that "NodeJS" Runtime is installed and updated in your system.
 
 ### `npm start`
 
