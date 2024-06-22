@@ -29,7 +29,7 @@ function TopBar() {
                     </NavLink>
                     {/* Avatar img */}
                     <NavLink to="*">
-                        <img src="./images/profile.jpg" alt="Admin Profile image" className="size-[40px] rounded-[50%] cursor-pointer"/>
+                        <img src="/images/profile.jpg" alt="Admin Profile image" className="size-[40px] rounded-[50%] cursor-pointer"/>
                     </NavLink>
                 </div>
             </div>
