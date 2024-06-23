@@ -6,7 +6,7 @@ import productDataSale from "../../data-dir/product-data-sale";
 import productData from "../../data-dir/product-data";
 
 function Product() {
-    //
+    // Params
     let params = useParams().productID;
 
     // State
@@ -23,7 +23,7 @@ function Product() {
             setMainProduct(false);
         }
 
-    }, []);
+    }, [params]);
 
     // JSX
     return (
