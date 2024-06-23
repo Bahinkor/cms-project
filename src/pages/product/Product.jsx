@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {Link, useParams} from 'react-router-dom';
 import {Alert} from "@mui/material";
+import {Publish} from "@mui/icons-material";
 import Chart from "../../components/chart/Chart";
 import productDataSale from "../../data-dir/product-data-sale";
 import productData from "../../data-dir/product-data";
@@ -38,6 +39,7 @@ function Product() {
                 </Link>
             </div>
 
+            {/* Conditional rendering */}
             {
                 mainProduct === null ? (
                     <Alert severity="info">Loading...</Alert>
@@ -84,6 +86,52 @@ function Product() {
                     </div>
                 )
             }
+
+            {/* Bottom section */}
+            {/* Edit product */}
+            <div className="p-5 m-5 box-shadow-feature-item">
+                <form className="flex justify-between">
+
+                    <div
+                        className="flex flex-col [&>label]:text-[#555] [&>label]:mb-[10px] [&>select]:mb-[10px] [&>select]:border-[1px] [&>select]:border-[#555]">
+
+                        <label htmlFor="product-name">Product Name</label>
+                        <input type="text" placeholder="MackBook" id="product-name"
+                               className="p-[5px] mb-[10px] border-b-[1px] border-[#555] focus:outline-none focus:shadow-outline"/>
+
+                        <label htmlFor="in-stock">In Stock</label>
+                        <select id="in-stock">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+
+                        <label htmlFor="active">Active</label>
+                        <select id="active">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+
+                    </div>
+
+                    {/* Uploader section */}
+                    <div className="flex flex-col justify-around">
+
+                        <div className="flex items-center">
+                            <img src="/images/macbook.jpg" alt="MackBook"
+                                 className="size-[6rem] mr-5 rounded-[10px]"/>
+                            <label>
+                                <Publish/>
+                            </label>
+                            <input type="file" className="hidden"/>
+                        </div>
+
+                        <button className="p-[5px] text-white bg-blue-700 rounded-[5px]">Edit (Upload)</button>
+
+                    </div>
+
+                </form>
+            </div>
+
 
         </div>
     );
